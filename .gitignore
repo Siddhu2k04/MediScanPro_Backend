@@ -18,5 +18,7 @@ data/sample/*
 *.pt
 *.pkl
 
+!ct_scan_model.h5
+
 # Python cache
 __pycache__/
