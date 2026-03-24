@@ -1,5 +1,14 @@
-# Ignore dataset folder
-data/
+# Ignore everything inside data
+data/*
+
+# BUT allow this specific folder
+!data/sample/
+
+# BUT ignore everything inside sample
+data/sample/*
+
+# BUT allow readme file
+!data/sample/readme.txt
 
 # Ignore all zip files
 *.zip
