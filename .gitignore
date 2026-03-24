@@ -1,0 +1,13 @@
+# Ignore dataset folder
+data/
+
+# Ignore all zip files
+*.zip
+
+# Ignore model files
+*.h5
+*.pt
+*.pkl
+
+# Python cache
+__pycache__/
