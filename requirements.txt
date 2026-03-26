@@ -6,4 +6,4 @@ gdown
 tensorflow-cpu==2.15.0
 setuptools>=68.0.0
 wheel
-gunicorn
+gunicorn==21.2.0
