@@ -16,8 +16,8 @@ CORS(app)
 MODEL_PATH = "ct_scan_model.h5"
 
 # 🔴 IMPORTANT: Replace with your actual Google Drive FILE ID
-FILE_ID = "YOUR_FILE_ID"
-GDRIVE_URL = f"https://drive.google.com/uc?id=1cSg_HR6ZjWY1IdBo_I0ouTJa1O06ZwSp"
+FILE_ID = "1cSg_HR6ZjWY1IdBo_I0ouTJa1O06ZwSp"
+GDRIVE_URL = f"https://drive.google.com/uc?id={FILE_ID}"
 
 # Download model if not present
 if not os.path.exists(MODEL_PATH):
@@ -78,3 +78,13 @@ def predict():
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
+
+print("Checking model file...")
+
+if not os.path.exists(MODEL_PATH):
+    print("Downloading model from Google Drive...")
+    gdown.download(GDRIVE_URL, MODEL_PATH, quiet=False)
+
+print("Loading model now...")
+model = tf.keras.models.load_model(MODEL_PATH)
+print("Model loaded successfully!")    
