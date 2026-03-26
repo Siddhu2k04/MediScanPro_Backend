@@ -10,7 +10,7 @@ CORS(app)
 # Load model
 model = tf.keras.models.load_model("ct_scan_model.h5")
 
-# Class labels (IMPORTANT)
+# Class labels
 class_labels = ["class1", "class2", "class3"]  # replace with your actual classes
 
 @app.route("/predict", methods=["POST"])
@@ -38,5 +38,7 @@ def predict():
         "confidence": confidence
     })
 
- if __name__ == "__main__":
-    app.run()
+
+# ✅ FIXED MAIN BLOCK
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=10000)
