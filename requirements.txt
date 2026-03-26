@@ -3,8 +3,8 @@ flask-cors==4.0.0
 numpy==1.23.5
 pillow
 gdown
-tensorflow==2.10.0
-keras==2.10.0
+tensorflow-cpu==2.12.0
+keras==2.12.0
 gunicorn==21.2.0
 setuptools>=68.0.0
 wheel
