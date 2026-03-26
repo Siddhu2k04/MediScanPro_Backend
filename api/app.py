@@ -11,7 +11,6 @@ CORS(app)
 # ✅ DO NOT load model here
 model = None
 
-# ✅ Lazy load function (VERY IMPORTANT)
 def load_model_once():
     global model
     if model is None:
