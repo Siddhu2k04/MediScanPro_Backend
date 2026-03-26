@@ -26,7 +26,7 @@ if not os.path.exists(MODEL_PATH):
 
 # Load model
 print("Loading model...")
-model = tf.keras.models.load_model(MODEL_PATH)
+model = tf.keras.models.load_model(MODEL_PATH, compile=False)
 print("Model loaded successfully!")
 
 # Class labels (CHANGE THESE)
