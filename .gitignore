@@ -1,0 +1,24 @@
+# Ignore everything inside data
+data/*
+
+# BUT allow this specific folder
+!data/sample/
+
+# BUT ignore everything inside sample
+data/sample/*
+
+# BUT allow readme file
+!data/sample/readme.txt
+
+# Ignore all zip files
+*.zip
+
+# Ignore model files
+*.h5
+*.pt
+*.pkl
+
+!ct_scan_model.h5
+
+# Python cache
+__pycache__/
